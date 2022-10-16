@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// 符合常量
+// 符号常量
 #define LOWER  0
 #define UPPER  300
 #define STEP   20
