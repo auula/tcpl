@@ -7,7 +7,7 @@
 
 // 统计辅助转换符
 #define LINE   '\n'
-#define TABE   '\t'
+#define TABLE  '\t'
 #define BLANK  ' '
 
 int main() {
@@ -25,7 +25,7 @@ int main() {
         if (c == LINE) {
             ++nl;
         }
-        if (c == LINE || c == TABE || c == BLANK) {
+        if (c == LINE || c == TABLE || c == BLANK) {
             state = OUT;
         } else if (state == OUT) {
             state = IN;
