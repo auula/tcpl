@@ -20,6 +20,8 @@ int main() {
 		ndigit[i] = 0;
 	}
 	
+	printf("input text:\n");
+		
 	while ((c = getchar()) != EOF) {
 
 		/* 确定输入的字符是否是数字范围 */
@@ -41,8 +43,31 @@ int main() {
 		printf("%d ", ndigit[i]);
 	}
 	
-	printf("white space : %d other : %d",nwhite,nother);		
+	printf("white space : %d other : %d \n",nwhite,nother);		
 	
+
+	// 绘画直方图
+	printf("Histogram:\n");
+		
+	for (int i = 0; i < 10; i++) {
+		
+		printf("%d |",i);
+		int count = 0;
+		
+		// 根据出现次数打印
+		for (int j = 0; j < ndigit[i];j++) {
+			putchar('=');
+			++count;
+		}
+		
+		// 根据count打印值
+		if (count > 0) {
+			printf("(%d)\n",count);
+		} else {
+			printf("\n");
+		}
+	}	
+
 	return 0;
 	
 }
