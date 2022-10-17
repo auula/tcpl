@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /* 初始化最长字符串空间 */
-#define MAXLINE 1000
+#define MAXLINE 100
 
 /* 声明函数原型 */
 int getlines(char line[], int maxline);
@@ -11,7 +11,9 @@ void copy(char to[], char from[]);
 
 int main() {
 	int len = 0, max = 0;
-	
+		
+	//int state = 1;	
+
 	char line[MAXLINE];
 	char longest[MAXLINE];
 	
@@ -37,11 +39,11 @@ int getlines(char s[],int max) {
 	for (i= 0;i<max-1 && (c = getchar())!=EOF && c!='\n';++i)
 		s[i] = c;
 	
-	/* 把最后换行符也存储到字符串数组中  */	
+
 	if (c == '\n') 
 		s[i] = c;
 		++i
-;
+	;
 	/* 表示一行字符串结束标记\0  */
 	s[i] = '\0'; 
 	
