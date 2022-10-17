@@ -1,7 +1,7 @@
 /* 求某数的n次幂 */
 #include <stdio.h>
 
-/* 定义一个求次幂的函数 */
+/* 声明和定义一个求次幂的函数 */
 int power(int m,int n);
 
 int main() {
