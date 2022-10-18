@@ -14,12 +14,13 @@ void copy(void);
 
 int main()
 {
-	int len = 0;
 
 	/* 使用extern关键字来导入外部变量，不同类型的分开写 */
 	extern char longest[];
-	extern int max = 0;
+	extern int max;
 
+	int len = 0;
+	max = 0;
 	while ((len = getlines()) > 0)
 	{
 		if (len > max)
