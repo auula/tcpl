@@ -14,12 +14,12 @@ void copy(void);
 
 int main()
 {
-	int len;
+	int len = 0;
 
-	/* 使用extern关键字来导入外部变量 */
-	extern char longest[], int max;
+	/* 使用extern关键字来导入外部变量，不同类型的分开写 */
+	extern char longest[];
+	extern int max = 0;
 
-	max = 0;
 	while ((len = getlines()) > 0)
 	{
 		if (len > max)
@@ -66,7 +66,8 @@ void copy(void)
 
 	int i = 0;
 
-	extern char line[], char longest[];
+	/* 同类型的变量可以放到一起引入 */
+	extern char line[], longest[];
 	while ((longest[i] = line[i]) != '\0')
 		++i;
 }
