@@ -4,7 +4,7 @@
 
 #define MAXLINE 1000 /* 最大长度为1000 */
 
-int max;			   /* 当前最长的长度 */
+int max = 0;		   /* 当前最长的长度 */
 char line[MAXLINE];	   /* 当前的输入行 */
 char longest[MAXLINE]; /* 保存最长的字符串 */
 
@@ -20,7 +20,7 @@ int main()
 	extern int max;
 
 	int len = 0;
-	max = 0;
+
 	while ((len = getlines()) > 0)
 	{
 		if (len > max)
