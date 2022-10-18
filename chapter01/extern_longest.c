@@ -8,7 +8,7 @@ int max;			   /* 当前最长的长度 */
 char line[MAXLINE];	   /* 当前的输入行 */
 char longest[MAXLINE]; /* 保存最长的字符串 */
 
-/* 原型函数 */
+/* 函数原型 */
 int getlines(void);
 void copy(void);
 
