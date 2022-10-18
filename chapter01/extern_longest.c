@@ -15,8 +15,9 @@ void copy(void);
 int main()
 {
 	int len;
-	extern char longest[];
-	extern int max;
+
+	/* 使用extern关键字来导入外部变量 */
+	extern char longest[], int max;
 
 	max = 0;
 	while ((len = getlines()) > 0)
@@ -65,8 +66,7 @@ void copy(void)
 
 	int i = 0;
 
-	extern char line[];
-	extern char longest[];
+	extern char line[], char longest[];
 	while ((longest[i] = line[i]) != '\0')
 		++i;
 }
