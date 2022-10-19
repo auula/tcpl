@@ -20,11 +20,12 @@ int main() {
 	}
 
 	if (c == '\n') {
-		++i;
 		str[i] = c;
+		++i;
 	}	
 		
-
+	str[i] = '\0';
+	
 	printf("%s length : %d",str,slen(str));
 	return 0;
 }
