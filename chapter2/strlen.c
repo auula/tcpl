@@ -16,8 +16,7 @@ int main() {
 	
 
 	for (i=0; i < MAXLINE-1 && (c = getchar()) != EOF && c != '\n';++i) {
-		str[i] = c;
-	
+		str[i] = c;	
 	}
 
 	if (c == '\n') {
