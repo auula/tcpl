@@ -10,9 +10,14 @@ int checked(int year);
 
 
 int main() {
+
+	extern int year;
+
 	printf("input year: \n");
 	scanf("%d",&year);
+
 	printf("%d %s leap year \n",year,checked(year) > 0 ? "is" : "not");
+	return 0;
 }
 
 int checked(int year) {
