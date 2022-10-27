@@ -11,10 +11,10 @@ int main() {
 }
 
 
-int swap(int *px,int *py) {
+void swap(int *px,int *py) {
 	int temp = 0;
 	
 	temp = *px;
-	px = *py;
-	py = *px;
+	*px = *py;
+	*py = *px;
 }
