@@ -4,11 +4,10 @@
 
 #define SIZE 10
 
-
 void print_arr(int *pi);
 
 int main() {
-	int n, array[SIZE], getint(int *);
+	int n, array[SIZE];
 	for (n = 0; n < SIZE ; n++) {
 		array[n] = n; 
 	}
