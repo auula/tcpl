@@ -5,14 +5,20 @@
 #define SIZE 10
 
 void print_arr(int *pi);
+void set_arr(int arr[]);
 
 int main() {
-	int n, array[SIZE];
-	for (n = 0; n < SIZE ; n++) {
-		array[n] = n; 
-	}
+	int array[SIZE];
+	set_arr(array);
 	print_arr(&array[0]);	
 	return 0;
+}
+
+
+void set_arr(int arr[]) {
+	for (int n = 0; n < SIZE; n++) {
+		arr[n] = n;
+	}
 }
 
 
