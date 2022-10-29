@@ -20,18 +20,16 @@ int main() {
 	/* 需要注意分配内存和释放内存要成正比 */
 	char *pi = alloc(6);
 	
-	pi = "Hello\0";
+	pi = "Hello";
 	
 	printf("%s\n",pi);
 	
 	afree(pi);
-
-	pi = "World\0";	
 	
-	ptallocbuf();	
+	char *new = alloc(6);
 
-	// printf("%c\n",allocbuf[1]);
-	
+	new = "World";
+
 	printf("%s\n",pi);
 	
 	return 0;
@@ -52,7 +50,9 @@ char *alloc(int n) {
 }
 
 void afree(char *p) {
-	if (p >= allocbuf && p < allocbuf + MAXSIZE)
+	if (p >= allocbuf && p < allocbuf + MAXSIZE) {
+		printf("free memory!");
 		allocp = p;
+	}
 }
 
