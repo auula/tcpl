@@ -14,7 +14,7 @@ char *alloc(int n);
 /* 释放该区域的指针 */
 void afree(char *p);
 /* 打印allocbuf中的元素 */
-void ptallocbuf(void);
+// void ptallocbuf(void);
 
 int main() {
 	/* 需要注意分配内存和释放内存要成正比 */
@@ -35,10 +35,6 @@ int main() {
 	return 0;
 }
 
-void ptallocbuf(void) {
-	extern char allocbuf[];
-	printf("%c\n",allocbuf[0]);
-}
 
 char *alloc(int n) {
 	if (allocbuf + MAXSIZE - allocp >= n) {
@@ -49,9 +45,9 @@ char *alloc(int n) {
 	}
 }
 
+
 void afree(char *p) {
 	if (p >= allocbuf && p < allocbuf + MAXSIZE) {
-		printf("free memory!");
 		allocp = p;
 	}
 }
