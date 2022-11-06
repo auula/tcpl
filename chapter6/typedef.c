@@ -7,8 +7,13 @@ typedef Integer MyInteger;
 
 typedef unsigned int UInteger;
 
-
 typedef char * String;
+
+/* 通过自定义结构体声明类型  */
+typedef struct MyPoint {
+	float x;
+	float y;
+} Point;
 
 int main() {
 	int a = 10;
@@ -24,4 +29,8 @@ int main() {
 	String s1 = "string variable.";
 	
 	printf("%s\n",s1);
+
+	Point p = {3.1415927, 434.1341};
+	
+	printf("p.x = %6.2f , p.y = %6.2f \n",p.x,p.y);	
 }
