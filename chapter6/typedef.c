@@ -26,6 +26,13 @@ typedef enum {
 	winter,
 } Season;
 
+/* 通过函数指针的方式声明别名 */
+typedef int (*Sum)(int,int);
+
+int sum(int i,int j) {
+	return i + j;
+}
+
 int main() {
 	int a = 10;
 
@@ -52,4 +59,9 @@ int main() {
 	Season s = spring;
 
 	printf("season = %u\n",s);
+	
+	Sum fun = sum;
+	
+	printf("5 + 5 = %d\n",fun(5,5));
+
 }
