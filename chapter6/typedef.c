@@ -15,8 +15,16 @@ typedef struct MyPoint {
 	float y;
 } Point;
 
-
+/* 通过已有的结构体创建类型别名的指针 */
 typedef Point *PP;
+
+/* 给枚举类型创建别名 */
+typedef enum {
+	spring,
+	summer,
+	autumn,
+	winter,
+} Season;
 
 int main() {
 	int a = 10;
@@ -41,5 +49,7 @@ int main() {
 
 	printf("pp.x = %6.2f , pp.y = %6.2f \n",pp->x,pp->y);	
 
-	
+	Season s = spring;
+
+	printf("season = %u\n",s);
 }
