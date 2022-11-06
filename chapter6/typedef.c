@@ -15,6 +15,9 @@ typedef struct MyPoint {
 	float y;
 } Point;
 
+
+typedef Point *PP;
+
 int main() {
 	int a = 10;
 
@@ -33,4 +36,10 @@ int main() {
 	Point p = {3.1415927, 434.1341};
 	
 	printf("p.x = %6.2f , p.y = %6.2f \n",p.x,p.y);	
+
+	PP pp = &p;
+
+	printf("pp.x = %6.2f , pp.y = %6.2f \n",pp->x,pp->y);	
+
+	
 }
