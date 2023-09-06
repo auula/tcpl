@@ -1,2 +1,2 @@
 # tcpl
-[The C programming learning.](https://blog.ibyte.me/post/the-c-programming-language/)
+[The C programming learning.](https://blog.jdk.world/post/the-c-programming-language/)
